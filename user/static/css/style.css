@@ -1,0 +1,22 @@
+.box-element{
+ 	box-shadow: hsl(0,0%,80%) 0 0 16px;
+ 	background-color: #fff;
+ 	padding: 10px;
+
+ }
+
+
+ .register{
+ 	max-width: 400px;
+ 	margin: auto;
+ 	margin-top: 10px;
+ 	font-family: 'Roboto', sans-serif !important;
+ 	padding-top: 5px;
+ }
+
+
+.thumbnail{
+	width: 300px !important;
+	height: 400px;
+    margin-right: 100px;
+}
