@@ -80,17 +80,17 @@ def profileView(request):
 		if request.method =='POST':
 			address = request.POST.get('address')
 			gender  = request.POST.get('gender')
-			profile_pic = request.POST.get('profile_pic')
 			
 			if address:
 				person.address = address
 			if gender:
 				person.gender = gender
-			if profile_pic:
-				person.pic = profile_pic
-			print(person.pic,'before')
+			if request.FILES:	
+				_, file = request.FILES.popitem()
+				file = file[0]
+
+				person.pic = file
 			person.save()
-			print(person.pic)
 			
 			HttpResponseRedirect('/profile')
 

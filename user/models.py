@@ -10,9 +10,9 @@ class Person(AbstractUser):
 	phone			= models.IntegerField(unique=True,blank=True,null=True)
 	first_name 		= models.CharField(max_length=30)
 	last_name 		= models.CharField(max_length=30)
-	gender			= models.CharField(max_length=30,choices=options)
+	gender			= models.CharField(max_length=30,choices=options,default='NA')
 	address			= models.CharField(max_length=255,default='Sample address')
-	pic				= models.ImageField()
+	pic				= models.ImageField(default='random.jpg')
 
 
 

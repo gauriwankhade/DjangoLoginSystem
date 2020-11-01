@@ -28,7 +28,7 @@
         <nav class="black">
           <div class="container">
             <div class="nav-wrapper">
-              <a href="/" class="brand-logo">User Login System</a>
+              <a href="/" class="brand-logo">Accounts</a>
               <a href="register" data-target="mobile-nav" class="sidenav-trigger">
                 <i class="material-icons">menu</i>
               </a>
@@ -60,17 +60,16 @@
         </li>
       </ul>
     <!--enter your content here-->
+    <div style="margin-left: 15px;margin-right: 10px;">
       <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m8">
           <div class="card">
             <div class="card-image">
-              <img class="responsive_img thumbnail" src="{{person.pic}}">
+              <img class="responsive_img thumbnail" src="{{person.pic.url}}">
               <span class="card-title">{{person.first_name}} {{person.last_name}}
-                <p style="margin-top: 0;">{{person.gender}}</p>
               </span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
               <ul>
                 <li>
                   <i style=" display: inline;vertical-align: middle;" class="material-icons">email</i>
@@ -97,7 +96,7 @@
       <div class="row">
         <div class="col s12 m6">
           <div class="box-element">
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
               {% csrf_token %}
               <div class="col s12">
                 <input type="text" name="address" placeholder="Address...">
@@ -113,14 +112,14 @@
               </div>
               <div class="col s12" >
                 <p>Change Profile Picture</p>
-                <input id="profile_pic" type="file" name="profile_pic">
+                <input id="file" type="file" name="file">
               </div>
               <input style="margin: 20px 12px;" type="submit" class="btn" value="Edit">
             </form> 
           </div>
         </div> 
       </div>
-      
+    </div>  
     <!--JavaScript at end of body for optimized loading-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     
